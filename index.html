@@ -3,221 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agrinho 2026 - Agro Forte</title>
+<title>Agrinho 2026 - Campo e Cidade Conectados</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#f5f3ee;
-    color:#2d3b2f;
-}
-
-header{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-.hero{
-    color:white;
-}
-
-.hero h1{
-    font-size:4rem;
-    font-weight:700;
-}
-
-.hero p{
-    margin-top:15px;
-    font-size:1.2rem;
-    max-width:700px;
-}
-
-.hero button{
-    margin-top:25px;
-    padding:14px 30px;
-    border:none;
-    border-radius:50px;
-    background:#7cb342;
-    color:white;
-    cursor:pointer;
-    font-size:1rem;
-    transition:.3s;
-}
-
-.hero button:hover{
-    background:#689f38;
-}
-
-.section{
-    padding:80px 10%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:2.5rem;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
-}
-
-.card-content h3{
-    margin-bottom:10px;
-}
-
-.highlight{
-    background:#dcedc8;
-}
-
-.stats{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
-}
-
-.stat{
-    text-align:center;
-}
-
-.stat h3{
-    font-size:3rem;
-    color:#558b2f;
-}
-
-footer{
-    background:#2d3b2f;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
 <header>
-    <div class="hero">
-        <h1>AGRO FORTE</h1>
-        <p>
-            Agrinho 2026 — Celebrando a força do campo,
-            a inovação agrícola e a sustentabilidade
-            que impulsionam o futuro do Brasil.
-        </p>
+<div class="logo">
+<i class="fa-solid fa-leaf"></i>
+Agrinho 2026
+</div>
 
-        <button>Explorar Projeto</button>
-    </div>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#estatisticas">Estatísticas</a>
+<a href="#impacto">Impacto</a>
+<a href="#tecnologia">Tecnologia</a>
+<a href="#contato">Contato</a>
+</nav>
 </header>
 
-<section class="section">
-    <div class="section-title">
-        <h2>O Campo que Move o Futuro</h2>
-    </div>
+<section id="inicio" class="hero">
+<div>
+<h1>Campo e Cidade Conectados</h1>
 
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200">
-            <div class="card-content">
-                <h3>Tecnologia Rural</h3>
-                <p>
-                    Máquinas inteligentes e agricultura de precisão
-                    transformando a produção.
-                </p>
-            </div>
-        </div>
+<p>
+A tecnologia aproxima produtores rurais e consumidores,
+promovendo sustentabilidade, inovação e desenvolvimento.
+</p>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200">
-            <div class="card-content">
-                <h3>Sustentabilidade</h3>
-                <p>
-                    Produzir mais preservando os recursos naturais.
-                </p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1200">
-            <div class="card-content">
-                <h3>Comunidade Rural</h3>
-                <p>
-                    Pessoas que fortalecem o agronegócio e a economia.
-                </p>
-            </div>
-        </div>
-    </div>
+<button onclick="rolar()">Explorar Projeto</button>
+</div>
 </section>
 
-<section class="section highlight">
-    <div class="section-title">
-        <h2>Agro em Números</h2>
-    </div>
+<section id="estatisticas">
 
-    <div class="stats">
-        <div class="stat">
-            <h3>+27%</h3>
-            <p>Inovação no Campo</p>
-        </div>
+<h2>Estatísticas do Agronegócio</h2>
 
-        <div class="stat">
-            <h3>+50M</h3>
-            <p>Hectares Produtivos</p>
-        </div>
+<div class="cards">
 
-        <div class="stat">
-            <h3>100%</h3>
-            <p>Compromisso com o Futuro</p>
-        </div>
-    </div>
+<div class="card">
+<h3 id="num1">0</h3>
+<p>Produtores Conectados</p>
+</div>
+
+<div class="card">
+<h3 id="num2">0</h3>
+<p>Alimentos Distribuídos</p>
+</div>
+
+<div class="card">
+<h3 id="num3">0</h3>
+<p>Municípios Atendidos</p>
+</div>
+
+<div class="card">
+<h3 id="num4">0</h3>
+<p>Áreas Preservadas</p>
+</div>
+
+</div>
+
+<div class="grafico">
+<canvas id="graficoAgrinho"></canvas>
+</div>
+
 </section>
 
-<footer>
-    <h3>Agrinho 2026 • Agro Forte</h3>
-    <p>Conectando educação, tecnologia e sustentabilidade.</p>
+<section id="impacto">
+
+<h2>Impacto Social</h2>
+
+<div class="grid">
+
+<div class="box">
+<i class="fa-solid fa-seedling"></i>
+<h3>Sustentabilidade</h3>
+<p>
+Produção consciente e preservação ambiental.
+</p>
+</div>
+
+<div class="box">
+<i class="fa-solid fa-tractor"></i>
+<h3>Produção</h3>
+<p>
+Tecnologia auxiliando produtores rurais.
+</p>
+</div>
+
+<div class="box">
+<i class="fa-solid fa-city"></i>
+<h3>Cidade</h3>
+<p>
+Abastecimento eficiente para a população.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="tecnologia">
+
+<h2>Inovação no Campo</h2>
+
+<div class="timeline">
+
+<div class="evento">
+<h3>2020</h3>
+<p>Expansão da agricultura digital.</p>
+</div>
+
+<div class="evento">
+<h3>2023</h3>
+<p>Uso crescente de drones.</p>
+</div>
+
+<div class="evento">
+<h3>2026</h3>
+<p>Monitoramento por IA.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer id="contato">
+<h3>Agrinho 2026</h3>
+<p>Projeto desenvolvido para o Concurso Agrinho.</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
